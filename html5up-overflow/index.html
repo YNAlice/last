@@ -9,18 +9,21 @@
 		<ul class="drop-down-menu">
 			<li>
 				<style>
+				
+
 					ul { /* 取消ul預設的內縮及樣式 */
-						margin: 0;
-						padding: 0;
-						list-style: none;
-						}
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
 		
 			ul.drop-down-menu {
-				border:#fff;
 				display: fixed;
 				font-family: 'Open Sans', Arial, sans-serif;
 				font-size: 1px;
-				position: fixed;
+				position:fixed;
+				z-index: 99;
+				border:3px #fff;
 			}
 		
 			ul.drop-down-menu li {
@@ -37,14 +40,14 @@
 				float: left; /* 只有第一層是靠左對齊*/
 			}
 		
-			ul.drop-down-menu a {
+			 ul.drop-down-menu a {
 				background-color: #000000;
 				color: rgb(255, 255, 255);
 				display: block;
-				padding: 0 50px;
+				padding: 0 116.5px;
 				text-decoration: none;
 				line-height: 40px;
-				border: 2px #fff double;
+				border: 3px #fff;
 		
 			}
 			ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
@@ -56,6 +59,7 @@
 				color: #fff;
 			}
 			</style>
+			
 			</li>
 			<li><a href="https://danieltsai0630.github.io/last/">回首頁</a></li>
 			<li><a href="#">甜點介紹</a>
@@ -170,13 +174,13 @@
 			</li>
 		</ul>
 		<style>
-		ul.drop-down-menu ul {
+		 ul.drop-down-menu ul {
 				border: 2px #fff double;
 				position: absolute;
 				z-index: 99;
 				left: px;
 				top: 100%;
-				min-width: 180px;
+			   min-width: 180px;
 			}
 		
 			ul.drop-down-menu ul li {
@@ -188,7 +192,6 @@
 			}
 		
 			ul.drop-down-menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
-				position: fixed;
 				z-index: 999;
 				top: 10px;
 				left: 90%;
@@ -211,7 +214,7 @@
 			<section id="header">
 				<header>
 					<h1>甜點</h1>
-					<p>By HTML5 UP</p>
+					<p>俗話說女人的第二個胃</p>
 				</header>
 				<footer>
 					<a href="#banner" class="button style2 scrolly-middle">Proceed as anticipated</a>
@@ -232,17 +235,26 @@
 				<header>
 					<h2>This is Overflow</h2>
 				</header>
-				<p>A brand new site template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>.<br />
+				<p>A brand new site template designed by AJfor HTML5 UP</a>.<br />
 				It’s responsive, built on HTML5/CSS3, and entirely free<br />
 				under the <a href="http://html5up.net/license">Creative Commons license</a>.</p>
-				<footer>
-					<a href="#first" class="button style2 scrolly">Act on this message</a>
-				</footer>
 			</section>
+			<style>
+				#banner {
+						position: relative;
+						color: #fff;
+						text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+						text-align: center;
+						background: rgba(0, 0, 0, 0) url("images/banner.svg") bottom center no-repeat;
+						padding: 5em 0 5em 0;
+						margin: 0;
+						background-size: 125% auto;
+					}
+				</style>
 
 		<!-- Feature 1 -->
 			<article id="first" class="container box style1 right">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+				<a class="image fit"><img id=macarone src="images/macarone/馬卡龍1.jpg" width=0 height=0 alt="" /></a>
 				<div class="inner">
 					<header>
 						<h2>Lorem ipsum<br />
@@ -250,18 +262,211 @@
 					</header>
 					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
 				</div>
+				<script language =javascript >//換圖程式
+					var curIndex=0;
+					//每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+					var timeInterval=3000;
+					var abc=new Array();
+					abc[0]="images/macarone/馬卡龍1.jpg";
+					abc[1]="images/macarone/馬卡龍2.jpg";
+					abc[2]="images/macarone/馬卡龍3.jpg";
+					setInterval(changeImg,timeInterval);
+					function changeImg()
+					{
+					var obj=document.getElementById("macarone");
+					if (curIndex==abc.length-1)
+					{
+					curIndex=0;
+					}
+					else
+					{
+					curIndex+=1;
+					}
+					obj.src=abc[curIndex];
+					}
+					</script>
+					<style>
+						.image.fit {
+									display: block;
+									width: 100%;
+									}
+						</style>
 			</article>
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-				<div class="inner">
+				<a  class="image fit"><img id=muffin src="images/muffin/鬆餅1.jpg" alt="" /></a>
 					<header>
 						<h2>Mollis posuere<br />
 						lectus lacus</h2>
 					</header>
 					<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.</p>
 				</div>
+				<script language =javascript >//換圖程式
+					var curIndex=0;
+					//每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+					var timeInterval=3000;
+					var arr=new Array();
+					arr[0]="images/muffin/鬆餅1.jpg";
+					arr[1]="images/muffin/鬆餅2.jpg";
+					arr[2]="images/muffin/鬆餅3.jpg";
+					setInterval(changeImg,timeInterval);
+					function changeImg()
+					{
+					var obj=document.getElementById("muffin");
+					if (curIndex==arr.length-1)
+					{
+					curIndex=0;
+					}
+					else
+					{
+					curIndex+=1;
+					}
+					obj.src=arr[curIndex];
+					}
+					</script>
+					<style>
+						.image.fit {
+									display: block;
+									width: 100%;
+									}
+						</style>
+			</article>
+				<style>
+						.image.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+					</style>
+			
+			</article>
+				<!-- Feature 3 -->
+				<article id="first" class="container box style1 right">
+					<a class="image fit"><img id=souffler src="images/souffler/舒芙蕾1.jpg" width=0 height=0 alt="" /></a>
+					<div class="inner">
+						<header>
+							<h2>Lorem ipsum<br />
+							dolor sit amet</h2>
+						</header>
+						<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
+					</div>
+					<script language =javascript >//換圖程式
+						var curIndex=0;
+						//每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+						var timeInterval=3000;
+						var abd=new Array();
+						abd[0]="images/souffler/舒芙蕾1.jpg";
+						abd[1]="images/souffler/舒芙蕾2.jpg";
+						abd[2]="images/souffler/舒芙蕾3.jpg";
+						setInterval(changeImg,timeInterval);
+						function changeImg()
+						{
+						var obj=document.getElementById("souffler");
+						if (curIndex==abd.length-1)
+						{
+						curIndex=0;
+						}
+						else
+						{
+						curIndex+=1;
+						}
+						obj.src=abd[curIndex];
+						}
+						</script>
+						<style>
+							.image.fit {
+										display: block;
+										width: 100%;
+										}
+							</style>
+				</article>
+	
+			<!-- Feature 4 -->
+				<article class="container box style1 left">
+					<a  class="image fit"><img id=cake src="images/cake/蛋糕.jfif" alt="" /></a>
+						<header>
+							<h2>Mollis posuere<br />
+							lectus lacus</h2>
+						</header>
+						<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.</p>
+					</div>
+					<script language =javascript >//換圖程式
+						var curIndex=0;
+						//每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+						var timeInterval=3000;
+						var cakes=new Array();
+						cakes[0]="images/cake/蛋糕.jfif";
+						cakes[1]="images/cake/蛋糕2.jpg";
+						cakes[2]="images/cake/蛋糕3.jpg";
+						setInterval(changeImg,timeInterval);
+						function changeImg()
+						{
+						var obj=document.getElementById("cake");
+						if (curIndex==cakes.length-1)
+						{
+						curIndex=0;
+						}
+						else
+						{
+						curIndex+=1;
+						}
+						obj.src=cakes[curIndex];
+						}
+						</script>
+						<style>
+							.image.fit {
+										display: block;
+										width: 100%;
+										}
+							</style>
+				</article>
+					<style>
+							.image.left {
+				float: left;
+				margin: 0 2em 2em 0;
+			}
+						</style>
+				
+				</article>
+					<!-- Feature 5 -->
+			<article id="first" class="container box style1 right">
+				<a class="image fit"><img id=ice src="images/ice/ice1.jpg" width=0 height=0 alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Lorem ipsum<br />
+						dolor sit amet</h2>
+					</header>
+					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
+				</div>
+				<script language =javascript >//換圖程式
+					var curIndex=0;
+					//每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+					var timeInterval=3000;
+					var icc=new Array();
+					icc[0]="images/ice/ice1.jpg";
+					icc[1]="images/ice/ice2.jpg";
+					icc[2]="images/ice/ice3.jpg";
+					setInterval(changeImg,timeInterval);
+					function changeImg()
+					{
+					var obj=document.getElementById("ice");
+					if (curIndex==icc.length-1)
+					{
+					curIndex=0;
+					}
+					else
+					{
+					curIndex+=1;
+					}
+					obj.src=icc[curIndex];
+					}
+					</script>
+					<style>
+						.image.fit {
+									display: block;
+									width: 100%;
+									}
+						</style>
 			</article>
 
 		<!-- Portfolio -->
@@ -310,7 +515,6 @@
 			</article>
 
 		<!-- Generic -->
-		<!--
 			<article class="container box style3">
 				<header>
 					<h2>Generic Box</h2>

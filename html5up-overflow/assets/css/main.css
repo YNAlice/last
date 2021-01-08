@@ -1498,10 +1498,6 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 		}
 
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
 
 		.image.left {
 			float: left;
