@@ -1,29 +1,231 @@
 <!DOCTYPE HTML>
-<!--
-	Overflow by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Overflow by HTML5 UP</title>
+		<title>甜點</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+		<ul class="drop-down-menu">
+			<li>
+				<style>
+					ul { /* 取消ul預設的內縮及樣式 */
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						}
+		
+			ul.drop-down-menu {
+				border:#fff;
+				display: fixed;
+				font-family: 'Open Sans', Arial, sans-serif;
+				font-size: 1px;
+				position: fixed;
+			}
+		
+			ul.drop-down-menu li {
+				position: relative;
+				white-space: nowrap;
+				border:3px #fff;
+			}
+		
+			ul.drop-down-menu > li:last-child {
+				border:3px#fff;
+			}
+		
+			ul.drop-down-menu > li {
+				float: left; /* 只有第一層是靠左對齊*/
+			}
+		
+			ul.drop-down-menu a {
+				background-color: #000000;
+				color: rgb(255, 255, 255);
+				display: block;
+				padding: 0 50px;
+				text-decoration: none;
+				line-height: 40px;
+				border: 2px #fff double;
+		
+			}
+			ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+				background-color:#7C3875;
+				color: #fff;
+			}
+			ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+				background-color:  #7C3875);
+				color: #fff;
+			}
+			</style>
+			</li>
+			<li><a href="https://danieltsai0630.github.io/last/">回首頁</a></li>
+			<li><a href="#">甜點介紹</a>
+				<ul>
+					<li><a href="#">馬卡龍</a>
+						<ul>
+							<li><a href="#">義式馬卡龍</a>
+							</li>
+							<li><a href="#">臺式馬卡龍</a>
+							</li>
+							<li><a href="#">造型馬卡龍</a>
+							</li>
+						</ul>
+		
+					</li>
+					<li><a href="#">鬆餅</a>
+						<ul>
+							<li><a href="#">美式鬆餅</a>
+							</li>
+							<li><a href="#">比利時鬆餅</a>
+							</li>
+							<li><a href="#">列日鬆餅</a>
+							</li>
+							<li><a href="#">布魯塞爾鬆餅</a>
+							</li>
+							<li><a href="#">英式鬆餅</a>
+							</li>
+							<li><a href="#">荷蘭鐵鍋鬆餅</a>
+							</li>
+							<li><a href="#">PLUS 荷蘭小鬆餅</a>
+							</li>
+							<li><a href="#">法式可麗餅</a>
+							</li>
+							<li><a href="#">香港雞蛋仔</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">舒芙蕾</a>
+					</li>
+					<li><a href="#">蛋糕</a>
+						<ul>
+							<li><a href="#">提拉米蘇</a>
+							</li>
+							<li><a href="#">草莓蛋糕</a>
+							</li>
+							<li><a href="#">瑞士卷</a>
+							</li>
+							<li><a href="#">海綿蛋糕</a>
+							</li>
+							<li><a href="#">紅色天鵝絨蛋糕</a>
+							</li>
+							<li><a href="#">起士蛋糕</a>
+							</li>
+							<li><a href="#">奶油蛋糕</a>
+							</li>
+							<li><a href="#">黑森林蛋糕</a>
+							</li>
+						</ul>
+		
+					</li>
+					<li><a href="#">冰淇淋</a>
+						<ul>
+							<li><a href="#">美式冰淇淋</a>
+							</li>
+							<li><a href="#">義式冰淇淋</a>
+							</li>
+							<li><a href="#">果汁冰糕</a>
+							</li>
+						</ul>
+		
+					</li>
+				</ul>
+			</li>
+			<li><a href="#">美食地圖</a>
+				<ul>
+					<li><a href="#">台灣美食地圖</a></li>
+					<li><a href="#">北部美食地圖</a></li>
+					<li><a href="#">中部美食地圖</a></li>
+					<li><a href="#">南部美食地圖</a></li>
+				</ul>
+			</li>
+			<li><a href="#">外送平台</a>
+				<ul>
+					<li><a href="#">foodpanda</a>
+						<ul>
+							<li><a href="#">平台介紹</a>
+							</li>
+							<li><a href="#">官網</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Uber Eats</a>
+						<ul>
+							<li><a href="#">平台介紹</a>
+							</li>
+							<li><a href="#">官網</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">街口外送</a>
+						<ul>
+							<li><a href="#">平台介紹</a>
+							</li>
+							<li><a href="#">官網</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			</li>
+			<li><a href="#">尋找我們</a>
+			</li>
+		</ul>
+		<style>
+		ul.drop-down-menu ul {
+				border: 2px #fff double;
+				position: absolute;
+				z-index: 99;
+				left: px;
+				top: 100%;
+				min-width: 180px;
+			}
+		
+			ul.drop-down-menu ul li {
+				border-bottom: #4A4771 1px solid;
+			}
+		
+			ul.drop-down-menu ul li:last-child {
+				border-bottom: none;
+			}
+		
+			ul.drop-down-menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
+				position: fixed;
+				z-index: 999;
+				top: 10px;
+				left: 90%;
+			}
+			ul.drop-down-menu ul { /*隱藏次選單*/
+				display: none;
+			}
+		
+			ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+				display: block;
+			}
+			</style>
+		</head>.
 	<body class="is-preload">
+		<!---menu--->
+			<section id="menu">
+				
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<h1>Overflow</h1>
+					<h1>甜點</h1>
 					<p>By HTML5 UP</p>
 				</header>
 				<footer>
 					<a href="#banner" class="button style2 scrolly-middle">Proceed as anticipated</a>
 				</footer>
 			</section>
+				<style>
+					#header h1{
+					margin: 0;
+					padding: 0;
+					border: 0;
+					font-size: 100%;
+					font: inherit;
+					vertical-align: baseline;}
+				</style>
 
 		<!-- Banner -->
 			<section id="banner">
